@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Montserrat:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-cinzel: "Cinzel", serif;
+  --font-sans: "Montserrat", sans-serif;
+  
+  --color-gold: #D4AF37;
+  --color-gold-light: #F9E596;
+  --color-gold-dark: #AA7C11;
+  --color-dark-bg: #050505;
+}
+
+body {
+  background-color: var(--color-dark-bg);
+  color: white;
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  height: 100dvh;
+  overflow: hidden;
+}
+
+#root {
+  height: 100%;
+}
+
+.title-glow {
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.5), 0 0 20px rgba(212, 175, 55, 0.3);
+}
+
+.god-rays {
+  background: conic-gradient(from 180deg at 50% 100%, 
+    rgba(212, 175, 55, 0) 0deg, 
+    rgba(212, 175, 55, 0.1) 45deg, 
+    rgba(212, 175, 55, 0.2) 90deg, 
+    rgba(212, 175, 55, 0.1) 135deg, 
+    rgba(212, 175, 55, 0) 180deg);
+  transform-origin: bottom center;
+  animation: pulse-rays 4s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-rays {
+  0% { transform: scale(1) rotate(-5deg); opacity: 0.5; }
+  100% { transform: scale(1.1) rotate(5deg); opacity: 0.8; }
+}
+
+.lightning-flash {
+  animation: flash 8s infinite;
+}
+
+@keyframes flash {
+  0%, 95%, 98% { background-color: transparent; }
+  96%, 99% { background-color: rgba(255, 255, 255, 0.15); }
+  97%, 100% { background-color: rgba(255, 255, 255, 0.3); }
+}
+
+.smoke-overlay {
+  background-image: radial-gradient(circle at center, transparent 0%, rgba(5, 5, 5, 0.8) 100%);
+  filter: blur(20px);
+}

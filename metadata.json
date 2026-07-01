@@ -1,0 +1,6 @@
+{
+  "name": "Remix: Window Seat",
+  "description": "Generate photorealistic window views based on live weather and specific locations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": []
+}
